@@ -1,0 +1,431 @@
+body, h1, h2, p, ul, li, a {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
+    color: white;
+    background: #131218;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* MENU */
+
+.menu-bg {
+    width: 100%;
+    position: fixed;
+    background: #011627;
+    z-index: 5;
+    
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 0;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.menu a {
+    color: #FDFFFC;
+}
+
+.menu-logo {
+    position: relative;
+}
+
+.menu-logo .seg{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu-logo:hover .seg {
+    visibility: visible;
+    opacity: 1;
+    
+}
+
+
+.menu-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-nav a {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.menu-nav a:hover {
+    color: #8BE9FD;
+}
+
+@media (max-width: 1200px) {
+    .menu {
+        justify-content: space-around;
+    }
+} 
+
+@media (max-width: 800px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu-logo {
+        margin-bottom: 15px;
+    }
+}
+
+/* INTRO */
+
+.intro {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 160px 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.intro-info {
+    flex: 2 1 260px;
+    margin: 0 10px;
+}
+
+.intro-info h1 {
+    font-size: 46px;
+    text-transform: uppercase;
+}
+
+.intro-info p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.icones {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.icones::before {
+    content: '';
+    display: block;
+    width: 160px;
+    height: 2px;
+    background: #8BE9FD;
+    margin-left: 5px;
+    margin-top: 35px;
+}
+
+.icones-info {
+    padding: 15px;
+}
+
+.icones-info:hover {
+        transform: scale(1.1) rotate(15deg);
+        color: black;       
+}
+
+.icones img {
+    width: 40px;
+}
+
+.intro-bg {
+    flex: 1 1 300px; 
+    margin: 0 10px;
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+    .intro {
+        max-width: 300px;
+        max-height: 650px;
+        flex-direction: column;
+        margin-bottom: 2px;
+        padding: 220px 0;
+        
+    }
+
+    .intro-bg {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+    .icones::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    background: none;
+    margin-left:0;
+    margin-top: 0;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1025px) {
+    .intro-info {
+        flex: 1 1 160px;
+        margin: 0 10px;
+    }
+
+    .intro-bg {
+        flex: 1 1 160px; 
+        margin: 0 10px;
+    }
+}
+
+/* SOBRE */
+.sobre {
+    background: #011627;
+}
+
+.sobre-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sobre-logo {
+    display: flex;
+    flex: 2 1 250px;
+    margin: 0 10px;
+    align-self: center;
+}
+
+.sobre-logo h1 {
+    font-size: 100px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+.sobre-logo h1:hover {
+    color: #8BE9FD;
+}
+
+.sobre-info {
+   
+    flex: 1 1 300px;
+    margin: 0 10px;
+    padding: 10px;
+}
+
+.sobre-info h1 {
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+.sobre-info span {
+    color: #8BE9FD;
+}
+
+.sobre-info p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.icones-sobre img {
+    width: 50px;
+}
+
+.icones-sobre {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.icons {
+    margin: 10px 10px;
+}
+
+.icons:hover {
+    transform: rotate(15deg);
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+
+    .sobre-container {
+        padding: 0px 0px;
+        padding-bottom: 80px;
+    }
+
+    .sobre-logo {
+        visibility: hidden;
+    }
+
+    .sobre-info {
+        align-items: center;
+    }
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    max-width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 180px 0;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.portfolio h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.portfolio span {
+    color: #8BE9FD;
+}
+
+.port-container {
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.port-sites {
+    flex: 1 1 300px;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid #8BE9FD;
+    border-radius: 5px;
+}
+
+.port-sites img {
+    width: 300px;
+    
+}
+
+
+.port-sites:hover {
+    transform: scale(1.6);
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+
+    .port-container {
+        flex-direction: column;
+    }
+    
+    .port-sites {
+        flex: 1 1 200px;
+        margin: 10px;
+        text-align: center;
+        border: 2px solid #8BE9FD;
+        border-radius: 5px;
+    }
+
+    .port-sites:hover {
+        transform: scale(1.1);
+    }
+
+}
+
+@media (min-width: 801px) and (max-width: 1025px) {
+  
+    
+    .port-sites {
+        flex: 1 1 200px;
+        margin: 10px;
+        text-align: center;
+        border: 2px solid #8BE9FD;
+        border-radius: 5px;
+    }
+
+    .port-sites:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* CONTATO */ 
+
+.contato {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 180px 0;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.contato-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    
+}
+
+.contato-items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    background: #011627;
+    margin: 10px 80px;
+    
+}
+
+.contato-items a {
+    color: white;
+}
+
+.contato img {
+    width: 60px;
+    margin: 10px auto;
+}
+
+
+/* FOOTER */
+.footer {
+    display: flex;
+    background: #011627;
+    height: 100px;
+    align-items: center;
+}
+
+.footer p {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    color: #8BE9FD;
+}
